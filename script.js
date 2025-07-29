@@ -102,5 +102,13 @@ document.getElementById("csvInput").addEventListener("change", function(e) {
   reader.readAsText(file);
 });
 
+grupos.forEach(grupo => {
+  grupo.addEventListener("blur", () => {
+    if (grupo.textContent.trim() === "") {
+      grupo.textContent = "Grupo sin nombre";
+    }
+  });
+});
+
 // Inicial
 //crearMesa(mesaId);
