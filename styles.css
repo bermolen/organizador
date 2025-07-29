@@ -1,0 +1,88 @@
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  height: 100vh;
+}
+.sidebar {
+  width: 30%;
+  padding: 10px;
+  background: #f5f5f5;
+  overflow-y: auto;
+}
+.mesas-area {
+  width: 70%;
+  padding: 10px;
+  background: #c8c8c8;
+  overflow-y: auto;
+}
+#grupo-colores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.grupo {
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+#invitados-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  list-style: none;
+  padding: 0;
+}
+.invitado {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+.mesa {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #e9e6eb;
+  margin: 20px auto;
+  position: relative;
+}
+.mesas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.mesa-numero {
+  position: absolute;
+  font-size: 80px;
+  color: #787878;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mesa .invitado {
+  position: absolute;
+}
+.mesa-principal {
+  grid-column: 1 / -1; /* Ocupa todo el ancho del grid */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
