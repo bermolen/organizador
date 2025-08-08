@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Organizador de Mesas</title>
   <link rel="stylesheet" href="styles.css" />
+  <link hrefnts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap
 </head>
 <body>
   <div class="container">
@@ -21,13 +22,21 @@
         <div class="grupo" style="background-color:#b2ebf2;" data-color="#b2ebf2"contenteditable="true">Grupo 7</div>
         <div class="grupo" style="background-color:#d7ccc8;" data-color="#d7ccc8"contenteditable="true">Grupo 8</div>
       </div>
+	  <div style="margin-bottom: 10px;">
+		  <input type="text" id="nuevoInvitado" class="campo" placeholder="Nombre del invitado" />
+		  <button id="agregarInvitado" class="boton">Agregar Invitado</button>
+	  </div>
       <ul id="invitados-lista"></ul>
       <input type="file" id="csvInput" accept=".csv" />
     </div>
-    <div class="mesas-area">
-      <button id="agregarMesa">Agregar Mesa</button>
-      <div class="mesas-grid" id="mesas-grid"></div>
-    </div>
+	<div class="mesas-area">
+	  <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+		<button id="agregarMesa" class="boton">Agregar Mesa</button>
+		<label for="capacidadMesa">Capacidad por mesa:</label>
+		<input type="number" id="capacidadMesa" class="campo" value="10" min="1" style="width: 60px;" />
+	  </div>
+	  <div class="mesas-grid" id="mesas-grid"></div>
+	</div>
   </div>
   <script src="script.js"></script>
 </body>
