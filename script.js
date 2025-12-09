@@ -237,7 +237,7 @@ function crearMesa(id) {
   let capacidad = parseInt(document.getElementById("capacidadMesa")?.value, 10) || 8;
   if (id === 1) {
     mesa.classList.add("mesa-principal");
-    capacidad = 4;
+    capacidad = 8;
   }
   mesa.dataset.capacidad = capacidad;
   const numero = document.createElement("div");
